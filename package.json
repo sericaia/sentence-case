@@ -5,8 +5,14 @@
   "main": "sentence-case.js",
   "scripts": {
     "test": "istanbul cover _mocha -- -R spec",
-    "build": "node build.js"
+    "build": "node build.js",
+    "stage-vendor": "git add vendor"
   },
+  "pre-commit": [
+    "build",
+    "stage-vendor",
+    "test"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/blakeembrey/sentence-case.git"
@@ -30,6 +36,7 @@
     "chai": "^1.9.1",
     "istanbul": "^0.2.6",
     "mocha": "^1.18.2",
+    "pre-commit": "0.0.9",
     "xregexp": "^2.0.0"
   },
   "dependencies": {
