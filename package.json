@@ -31,5 +31,8 @@
     "istanbul": "^0.2.6",
     "mocha": "^1.18.2",
     "xregexp": "^2.0.0"
+  },
+  "dependencies": {
+    "lower-case": "^1.0.2"
   }
 }
