@@ -40,6 +40,6 @@
     "xregexp": "^2.0.0"
   },
   "dependencies": {
-    "lower-case": "^1.0.2"
+    "lower-case": "^1.1.1"
   }
 }

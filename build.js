@@ -3,8 +3,8 @@ var join    = require('path').join;
 var XRegExp = require('xregexp').XRegExp;
 
 /**
- * Write the regular expressions to a file for reuse without needing to rely on
- * XRegExp to be loaded every time.
+ * Write regular expressions to a file for reuse. Avoids requiring XRegExp as
+ * a dependency in the users application.
  *
  * @param {String} file
  * @param {RegExp} regexp

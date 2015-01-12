@@ -10,7 +10,7 @@ var TRAILING_DIGIT_REGEXP = require('./vendor/trailing-digit-regexp');
  * @param  {String} str
  * @return {String}
  */
-module.exports = function (str) {
+module.exports = function (str, locale) {
   if (str == null) {
     return '';
   }
@@ -26,5 +26,5 @@ module.exports = function (str) {
     .replace(/^ | $/g, '');
 
   // Lower case the entire string.
-  return lowerCase(str);
+  return lowerCase(str, locale);
 };
