@@ -3,6 +3,11 @@
   "version": "1.1.0",
   "description": "Sentence case a string",
   "main": "sentence-case.js",
+  "files": [
+    "sentence-case.js",
+    "vendor",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "istanbul cover _mocha -- -R spec",
     "build": "node build.js",
