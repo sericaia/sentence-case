@@ -1,7 +1,7 @@
 /* global describe, it */
-var util         = require('util');
-var expect       = require('chai').expect;
-var sentenceCase = require('./');
+var util = require('util')
+var expect = require('chai').expect
+var sentenceCase = require('./')
 
 /**
  * Automatically generate test suite from the array of rules.
@@ -34,7 +34,7 @@ var TESTS = [
   [null, ''],
   [undefined, ''],
   [10, '10'],
-  [{ toString: function () { return 'test'; } }, 'test'],
+  [{ toString: function () { return 'test' } }, 'test'],
 
   // Whitespace.
   ['  test  ', 'test'],
@@ -45,16 +45,24 @@ var TESTS = [
   ['Iñtërnâtiônàlizætiøn', 'iñtërnâtiônàlizætiøn'],
 
   // Number string input.
-  ['something2014other', 'something 2014 other']
-];
+  ['something2014other', 'something 2014 other'],
+
+  // Custom replacement character
+  ['HELLO WORLD!', 'hello_world', null, '_'],
+
+  // Custom locale.
+  ['A STRING', 'a strıng', 'tr']
+]
 
 describe('sentence case', function () {
   TESTS.forEach(function (test) {
-    var before = test[0];
-    var after  = test[1];
+    var before = test[0]
+    var after = test[1]
+    var locale = test[2]
+    var replacement = test[3]
 
     it(util.inspect(before) + ' -> ' + util.inspect(after), function () {
-      expect(sentenceCase(before)).to.equal(after);
-    });
-  });
-});
+      expect(sentenceCase(before, locale, replacement)).to.equal(after)
+    })
+  })
+})
