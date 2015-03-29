@@ -11,7 +11,7 @@ Supports Unicode (non-ASCII characters) and non-string entities, such as objects
 
 ## Installation
 
-```bash
+```
 npm install sentence-case --save
 ```
 
