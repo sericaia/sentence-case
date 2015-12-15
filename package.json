@@ -3,8 +3,10 @@
   "version": "1.1.2",
   "description": "Sentence case a string",
   "main": "sentence-case.js",
+  "typings": "sentence-case.d.ts",
   "files": [
     "sentence-case.js",
+    "sentence-case.d.ts",
     "vendor",
     "LICENSE"
   ],
