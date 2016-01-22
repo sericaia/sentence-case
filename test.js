@@ -15,7 +15,8 @@ var TESTS = [
 
   // Camel case.
   ['testString', 'test string'],
-  ['testString123', 'test string 123'],
+  ['testString123', 'test string123'],
+  ['helloWorld20', 'hello world20'],
 
   // Non-alphanumeric separators.
   ['dot.case', 'dot case'],
@@ -26,9 +27,9 @@ var TESTS = [
   ['"quotes"', 'quotes'],
 
   // Space between number parts.
-  ['version 0.45.0', 'version 0 45 0'],
-  ['version 0..78..9', 'version 0 78 9'],
-  ['version 4_99/4', 'version 4 99 4'],
+  ['version 0.45.0', 'version0 45 0'],
+  ['version 0..78..9', 'version0 78 9'],
+  ['version 4_99/4', 'version4 99 4'],
 
   // Odd input.
   [null, ''],
@@ -45,7 +46,7 @@ var TESTS = [
   ['Iñtërnâtiônàlizætiøn', 'iñtërnâtiônàlizætiøn'],
 
   // Number string input.
-  ['something2014other', 'something 2014 other'],
+  ['something2014other', 'something2014 other'],
 
   // Custom replacement character
   ['HELLO WORLD!', 'hello_world', null, '_'],

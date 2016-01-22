@@ -26,6 +26,8 @@ sentenceCase('dot.case')        //=> "dot case"
 sentenceCase('camelCase')       //=> "camel case"
 sentenceCase('Beyoncé Knowles') //=> "beyoncé knowles"
 
+sentenceCase('helloWorld20') //=> "hello world20"
+
 sentenceCase('A STRING', 'tr') //=> "a strıng"
 
 sentenceCase('HELLO WORLD!', null, '_') //=> "hello_world"
