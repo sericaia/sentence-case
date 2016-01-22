@@ -24,11 +24,6 @@ module.exports = function (str, locale, replacement) {
   }
 
   function replace (match, index, string) {
-    console.log('match', match)
-    console.log('index', index)
-    console.log('string', string)
-    console.log('string.charAt(index)', isCharInteger(string.charAt(index + 1)))
-    console.log('char', string.charAt(index + 1))
     if (index === 0 || index === (string.length - match.length) ||
     isCharInteger(string.charAt(index + 1))) {
       return ''
